@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\StatisticsController;
-use App\Http\Controllers\TaskController;
+use App\Http\Controllers\NewItemController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,5 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [TaskController::class, 'create']);
-
+Route::get('/', [NewItemController::class, 'index']);
+Route::get('/news', [NewItemController::class, 'index'])->name('news');
+Route::get('/news/comments/{id}', [NewItemController::class, 'comments'])->name('news.comments');
+Route::post('/news/{id}/comments', [NewItemController::class, 'newComment'])->name('new.comment');

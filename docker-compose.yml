@@ -6,17 +6,17 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: 'dev'
-      MYSQL_DATABASE: 'convertedin'
-      MYSQL_USER: 'convertedin'
-      MYSQL_PASSWORD: 'convertedin'
+      MYSQL_DATABASE: 'rizeme'
+      MYSQL_USER: 'rizeme'
+      MYSQL_PASSWORD: 'rizeme'
     ports:
       - 3306:3306
     volumes:
       - my-db:/var/lib/mysql
     networks:
-      - convertedin
+      - rizeme
 
-  convertedin:
+  rizeme:
     build:
       context: .
       dockerfile: Dockerfile
@@ -27,10 +27,10 @@ services:
     ports:
       - 8888:80
     networks:
-      - convertedin
+      - rizeme
 
 networks:
-  convertedin:
+  rizeme:
     driver: bridge
 volumes:
   my-db:

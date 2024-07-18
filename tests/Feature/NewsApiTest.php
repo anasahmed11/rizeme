@@ -1,11 +1,9 @@
 <?php
     namespace Tests\Feature;
 
-    use App\Models\Admin;
     use App\Models\Category;
     use App\Models\NewItem;
     use App\Models\NewItemComment;
-    use App\Models\User;
     use Illuminate\Foundation\Testing\DatabaseTransactions;
     use Tests\TestCase;
 
@@ -55,6 +53,8 @@
                     ],
                 ],
             ]);
+            //check the data send success
+            $this->assertTrue($response->json('data.pagination.total') > 0);
         }
 
     }
