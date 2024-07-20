@@ -21,6 +21,6 @@ class NewItemService
     {
         $per_page = $request->per_page ? $request->per_page : 10;
         $news = NewItem::where('published', 1)->with('category')->paginate($per_page);
-        return $this->send_response(TRUE, 200, __("auth.Successful", [], $request->header('lang')), new NewItemCollection($news));
+        return $this->send_response(TRUE, 200, 'operation done successfully', new NewItemCollection($news));
     }
 }
