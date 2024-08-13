@@ -7,7 +7,7 @@ return [
     'title' => 'rizme',
 
     // A short description of your API. Will be included in the docs webpage, Postman collection and OpenAPI spec.
-    'description' => 'test',
+    'description' => 'this documentation for news system apis',
 
     // The base URL displayed in the docs. If this is empty, Scribe will use the value of config('app.url') at generation time.
     // If you're using `laravel` type, you can set this to a dynamic string, like '{{ config("app.tenant_url") }}' to get a dynamic base URL.
@@ -128,8 +128,7 @@ return [
     'intro_text' => <<<INTRO
 This documentation aims to provide all the information you need to work with our API.
 
-<aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
-You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
+<aside></aside>
 INTRO
     ,
 

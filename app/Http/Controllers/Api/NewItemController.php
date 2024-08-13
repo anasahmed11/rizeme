@@ -25,7 +25,7 @@
         }
 
 
-        #[Endpoint("Add a word to the list.","This endpoint return news with pagination")]
+        #[Endpoint("get","This endpoint return news with pagination")]
         #[QueryParam(name: "per_page", type: "int", description: "Field to return pagination.", required: false, example: 15)]
         #[ResponseFromApiResource(NewItemCollection::class,NewItem::class,collection: true, paginate:15,with:['category'],additional: ["success" => true, "message" => "operation done successfully",'response_code'=>200])]
         public function get(Request $request)
