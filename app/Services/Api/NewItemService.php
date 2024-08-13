@@ -6,6 +6,8 @@ use App\Http\Resources\Api\NewItemCollection;
 use App\Models\NewItem;
 use App\Traits\HandleResponse;
 use Illuminate\Http\Request;
+
+
 use Validator;
 
 class NewItemService
