@@ -25,6 +25,8 @@ class NewItemResource extends Resource
     protected static ?string $model = NewItem::class;
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+
+
     public static function form(Form $form): Form
     {
         // Fetch categories from the database
@@ -75,6 +77,8 @@ class NewItemResource extends Resource
             'edit' => Pages\EditNewItem::route('/{record}/edit'),
         ];
     }
+
+
 
 
 }
